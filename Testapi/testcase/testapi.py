@@ -26,163 +26,217 @@ class TestAPI(unittest.TestCase, Reques):
         Log('测试结束')
 
     def test_01(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_02(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_03(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_04(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_05(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_06(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_07(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_08(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_09(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_10(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_11(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_12(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_13(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_14(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_15(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_16(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_17(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_18(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_19(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_20(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_21(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_22(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_23(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_24(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_25(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_26(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_27(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_28(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_29(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_30(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_31(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_32(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_33(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_34(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_35(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_36(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_37(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_38(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_39(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_40(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_41(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_42(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_43(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_44(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_45(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_46(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_47(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_48(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_49(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_50(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_51(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_52(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_53(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
 
     def test_54(self):
-        self.Request()
+        NONE = self.Request()
+        self.assertIsNotNone(NONE)
