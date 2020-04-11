@@ -5,10 +5,10 @@ from xlutils.copy import copy
 import xlrd
 from Testapi.config.config import REPORT_SAVE
 from Testapi.config.config import TABLE
-import requests
+from Testapi.Commom.Request import Reques
 
 
-class TestAPI(unittest.TestCase):
+class TestAPI(unittest.TestCase, Reques):
 
     @classmethod
     def setUpClass(cls) -> None:
@@ -25,93 +25,164 @@ class TestAPI(unittest.TestCase):
         cls.work_book_copy.save(REPORT_SAVE)
         Log('测试结束')
 
-    def Request(self):
-        self.rows = self.work.pop(0)
-        self.Request_way = self.work_sheet.cell_value(self.rows, 2)
-        self.url = self.work_sheet.cell_value(self.rows, 3)
-        self.data = self.work_sheet.cell_value(self.rows, 4)
-        self.response_result = self.work_sheet.cell_value(self.rows, 5)
-        if 'GET' in self.Request_way:
-            response = requests.get(url=self.url)
-            if len(self.response_result) > 0:
-                self.assertIn(str(response.text), str(self.response_result))
-                self.assertIn(str(response.status_code), str(200))
-                if str(response.text) in str(self.response_result) and str(response.status_code) == str(200):
-                    self.work_book_sheet.write(self.rows, 6, 'pass')
-                else:
-                    self.work_book_sheet.write(self.rows, 6, 'fail')
-            else:
-                self.assertIn(str(response.status_code), str(200))
-                if str(response.status_code) == str(200):
-                    self.work_book_sheet.write(self.rows, 6, 'pass')
-                else:
-                    self.work_book_sheet.write(self.rows, 6, 'fail')
-            if 'POST' in self.Request_way:
-                if len(self.data) > 0:
-                    response = requests.post(url=self.url, data=self.data)
-                    if len(self.response_result) > 0:
-                        self.assertIn(str(response.text), str(self.response_result))
-                        self.assertIn(str(response.status_code), str(200))
-                        if str(response.text) in str(self.response_result) and str(response.status_code) == str(200):
-                            self.work_book_sheet.write(self.rows, 6, 'pass')
-                        else:
-                            self.work_book_sheet.write(self.rows, 6, 'fail')
-                    else:
-                        self.assertIn(str(response.status_code), str(200))
-                        if str(response.status_code) == str(200):
-                            self.work_book_sheet.write(self.rows, 6, 'pass')
-                        else:
-                            self.work_book_sheet.write(self.rows, 6, 'fail')
-                else:
-                    response = requests.post(url=self.url)
-                    if len(self.response_result) > 0:
-                        self.assertIn(str(response.text), str(self.response_result))
-                        self.assertIn(str(response.status_code), str(200))
-                        if str(response.text) in str(self.response_result) and str(response.status_code) == str(200):
-                            self.work_book_sheet.write(self.rows, 6, 'pass')
-                        else:
-                            self.work_book_sheet.write(self.rows, 6, 'fail')
-                    else:
-                        self.assertIn(str(response.status_code), str(200))
-                        if str(response.status_code) == str(200):
-                            self.work_book_sheet.write(self.rows, 6, 'pass')
-                        else:
-                            self.work_book_sheet.write(self.rows, 6, 'fail')
-
-        if 'POST' in self.Request_way:
-            if len(self.data) > 0:
-                response = requests.post(url=self.url, data=self.data)
-                if len(self.response_result) > 0:
-                    self.assertIn(str(response.text), str(self.response_result))
-                    self.assertIn(str(response.status_code), str(200))
-                    if str(response.text) in str(self.response_result) and str(response.status_code) == str(200):
-                        self.work_book_sheet.write(self.rows, 6, 'pass')
-                    else:
-                        self.work_book_sheet.write(self.rows, 6, 'fail')
-                else:
-                    self.assertIn(str(response.status_code), str(200))
-                    if str(response.status_code) == str(200):
-                        self.work_book_sheet.write(self.rows, 6, 'pass')
-                    else:
-                        self.work_book_sheet.write(self.rows, 6, 'fail')
-            else:
-                response = requests.post(url=self.url)
-                if len(self.response_result) > 0:
-                    self.assertIn(str(response.text), str(self.response_result))
-                    self.assertIn(str(response.status_code), str(200))
-                    if str(response.text) in str(self.response_result) and str(response.status_code) == str(200):
-                        self.work_book_sheet.write(self.rows, 6, 'pass')
-                    else:
-                        self.work_book_sheet.write(self.rows, 6, 'fail')
-                else:
-                    self.assertIn(str(response.status_code), str(200))
-                    if str(response.text) in str(self.response_result) and str(response.status_code) == str(200):
-                        self.work_book_sheet.write(self.rows, 6, 'pass')
-                    else:
-                        self.work_book_sheet.write(self.rows, 6, 'fail')
-
     def test_01(self):
         self.Request()
 
     def test_02(self):
+        self.Request()
+
+    def test_03(self):
+        self.Request()
+
+    def test_04(self):
+        self.Request()
+
+    def test_05(self):
+        self.Request()
+
+    def test_06(self):
+        self.Request()
+
+    def test_07(self):
+        self.Request()
+
+    def test_08(self):
+        self.Request()
+
+    def test_09(self):
+        self.Request()
+
+    def test_10(self):
+        self.Request()
+
+    def test_11(self):
+        self.Request()
+
+    def test_12(self):
+        self.Request()
+
+    def test_13(self):
+        self.Request()
+
+    def test_14(self):
+        self.Request()
+
+    def test_15(self):
+        self.Request()
+
+    def test_16(self):
+        self.Request()
+
+    def test_17(self):
+        self.Request()
+
+    def test_18(self):
+        self.Request()
+
+    def test_19(self):
+        self.Request()
+
+    def test_20(self):
+        self.Request()
+
+    def test_21(self):
+        self.Request()
+
+    def test_22(self):
+        self.Request()
+
+    def test_23(self):
+        self.Request()
+
+    def test_24(self):
+        self.Request()
+
+    def test_25(self):
+        self.Request()
+
+    def test_26(self):
+        self.Request()
+
+    def test_27(self):
+        self.Request()
+
+    def test_28(self):
+        self.Request()
+
+    def test_29(self):
+        self.Request()
+
+    def test_30(self):
+        self.Request()
+
+    def test_31(self):
+        self.Request()
+
+    def test_32(self):
+        self.Request()
+
+    def test_33(self):
+        self.Request()
+
+    def test_34(self):
+        self.Request()
+
+    def test_35(self):
+        self.Request()
+
+    def test_36(self):
+        self.Request()
+
+    def test_37(self):
+        self.Request()
+
+    def test_38(self):
+        self.Request()
+
+    def test_39(self):
+        self.Request()
+
+    def test_40(self):
+        self.Request()
+
+    def test_41(self):
+        self.Request()
+
+    def test_42(self):
+        self.Request()
+
+    def test_43(self):
+        self.Request()
+
+    def test_44(self):
+        self.Request()
+
+    def test_45(self):
+        self.Request()
+
+    def test_46(self):
+        self.Request()
+
+    def test_47(self):
+        self.Request()
+
+    def test_48(self):
+        self.Request()
+
+    def test_49(self):
+        self.Request()
+
+    def test_50(self):
+        self.Request()
+
+    def test_51(self):
+        self.Request()
+
+    def test_52(self):
+        self.Request()
+
+    def test_53(self):
+        self.Request()
+
+    def test_54(self):
         self.Request()

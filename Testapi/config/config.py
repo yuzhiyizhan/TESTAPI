@@ -19,9 +19,13 @@ SAVE_CASE = os.path.join(PATH, 'report')
 REPORT_NAME = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
 # 测试报告保存文件名
 REPORT_PATH = os.path.join(SAVE_CASE, f'{REPORT_NAME}' + '.html')
-#.xls报告路径
+# .xls报告路径
 REPORT_SAVE = os.path.join(SAVE_CASE, f'{time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())}.xls')
-#操作第几张表
+# 操作第几张表
 TABLE = 0
-#测试用例存放路径
+# 测试用例存放路径
 TESTCASE = os.path.join(PATH, 'testcase')
+# 接口响应时间
+RESPONSE_TIME = 2
+# 需要关注的响应参数
+RESPONSE_MESSAGE = {'code': 200}
