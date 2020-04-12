@@ -17,5 +17,12 @@ def hello():
     return '{hello:1}'
 
 
+@app.route('/debug', methods=['GET', 'POST'])
+def hello_world():
+    r = request.args.get('info', '请用info传参')
+
+    return r
+
+
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5555, debug=True)

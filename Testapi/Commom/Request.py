@@ -14,15 +14,27 @@ from Testapi.Commom.log import Log
 class Reques(object):
 
     def __init__(self):
+
+        # 打开.xls表
         self.work_book = xlrd.open_workbook(FILES, formatting_info=True)
+        # 复制表
         self.work_book_copy = copy(self.work_book)
+        # 选择打开后的文件里面的第几张表
         self.work_sheet = self.work_book.sheet_by_name(self.work_book.sheet_names()[TABLE])
+        # 复制表后新建一张表
         self.work_book_sheet = self.work_book_copy.get_sheet(0)
+        # 查看表有多少列
         self.num = self.work_sheet.nrows
+        # 将列保存起来调用一次用例就删掉一列
         self.work = list(range(1, self.num))
 
-
     def subb(self, string, *args):
+        '''
+        将中文‘’转化成英文''
+        :param string: 要转化的字符串
+        :param args: 将什么转化成'
+        :return: None
+        '''
         s = args
         p = []
         for i in s:
@@ -32,6 +44,12 @@ class Reques(object):
         return p[-1]
 
     def IF_json(self, test, response_result):
+        '''
+        对比字典KEY的值是否一致
+        :param test: 要关注的参数(自己写的字典)
+        :param response_result: 响应的字典
+        :return: 测试通过不返回,失败返回'NONE'
+        '''
         IF_list = list(test.keys())
         for i in IF_list:
             if i in response_result:
@@ -58,6 +76,12 @@ class Reques(object):
             pass
 
     def Request(self, test=None, skip=None):
+        '''
+        操作打开的测试用例
+        :param test: 需要关注的参数,此处填写将不再关注全局参数,目前只支持字典格式
+        :param skip: 此处天'skip'时将跳过用例
+        :return: 测试用例成功返回'NONE',失败返回默认值None
+        '''
         if skip == 'skip':
             self.rows = self.work.pop(0)
             self.name = self.work_sheet.cell_value(self.rows, 1)
@@ -342,9 +366,9 @@ class Reques(object):
                     if len(response_result) > 0:
                         if type(response_result) == dict:
                             if type(text) == dict:
-                                 NONE = self.IF_json(text, response_result)
-                                 if NONE == None:
-                                     return 'NONE'
+                                NONE = self.IF_json(text, response_result)
+                                if NONE == None:
+                                    return 'NONE'
                             else:
                                 if text > 0:
                                     Log(f'{self.name}接口响应为文本类型,文档为json,测试不通过')
