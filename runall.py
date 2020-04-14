@@ -1,5 +1,5 @@
 import unittest
-from Testapi.Commom.HTMLTestRunner3 import HTMLTestRunner
+from Testapi.Commom.HTMLTestRunner import HTMLTestRunner
 from Testapi.config.config import REPORT_PATH
 from Testapi.config.config import TESTCASE
 
